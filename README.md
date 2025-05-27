@@ -22,11 +22,6 @@ Built with **React**, **Node.js**, **Express**, and **MongoDB**. Weather data is
 
 ---
 
-## 🖼️ Demo Screenshots
-
-> *(Add your screenshots here! You can drag images into GitHub after pushing)*
-
----
 
 ## 🚀 Technologies Used
 
@@ -149,8 +144,8 @@ npm start
 
 ## 👨‍💻 Author
 
-Made by **[Your Name]**  
-Feel free to [connect with me](https://github.com/your-username)!
+Made by Parinil 
+Feel free to [connect with me](https://github.com/parinilk)!
 
 ---
 
