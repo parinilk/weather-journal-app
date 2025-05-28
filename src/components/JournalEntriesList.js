@@ -32,7 +32,7 @@ const JournalEntriesList = () => {
 
   return (
     <div className="mt-8 max-w-3xl mx-auto space-y-6">
-      {entries.map((entry) => (
+      {Array.isArray(entries) && entries.map((entry) => (
         <div
           key={entry._id}
           className="p-6 bg-white shadow-lg rounded-2xl border border-gray-200"
