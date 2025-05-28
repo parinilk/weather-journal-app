@@ -13,7 +13,8 @@ const JournalEntryForm = ({ onEntryAdded }) => {
       );
       const weatherDescription = weatherRes.data.weather[0].description;
 
-      await axios.post('/api/entries', {
+      const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+      await axios.post(`${BASE_URL}/api/entries`, {
         location,
         notes,
         weather: weatherDescription,

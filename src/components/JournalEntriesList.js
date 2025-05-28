@@ -3,12 +3,14 @@ import axios from 'axios';
 import YoutubeVideoList from './YoutubeVideoList';
 import GoogleMapEmbed from './GoogleMapEmbed';
 
+
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const JournalEntriesList = () => {
   const [entries, setEntries] = useState([]);
 
   const fetchEntries = async () => {
     try {
-      const res = await axios.get('/api/entries');
+      const res = await axios.get(`${BASE_URL}/api/entries`);
       setEntries(res.data);
     } catch (err) {
       console.error('Error fetching entries:', err);
@@ -17,7 +19,7 @@ const JournalEntriesList = () => {
 
   const deleteEntry = async (id) => {
     try {
-      await axios.delete(`/api/entries/${id}`);
+      await axios.delete(`${BASE_URL}/api/entries/${id}`);
       fetchEntries();
     } catch (err) {
       console.error('Error deleting entry:', err);
